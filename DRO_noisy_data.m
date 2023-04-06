@@ -229,11 +229,15 @@ for iEpsilon=1:length(epsilon)
     
     hold on  
     
-    semilogx(N,10*e_clean,'-r','linewidth',2)
+    semilogx(N,e_clean,'-r','linewidth',2)
 
     leg_text{3}="Non-private";  
     
-    ylim([0 6])
+    if iEpsilon==1
+        ylim([0 6])
+    else
+        ylim([0 3])
+    end
     
     grid on
     
